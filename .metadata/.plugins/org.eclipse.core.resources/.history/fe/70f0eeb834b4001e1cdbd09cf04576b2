@@ -1,0 +1,35 @@
+package com.shopme.user;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.shopme.admin.ShopmeBackEndApplication;
+import com.shopme.admin.user.RoleRepository;
+import com.shopme.common.entity.Role;
+
+@SpringBootTest(classes = ShopmeBackEndApplication.class)
+@AutoConfigureTestDatabase(replace = Replace.NONE)
+public class RoleRepositoryTest {
+
+	@Autowired
+	private RoleRepository repo;
+	
+	@Test
+	public void testCreateFirstRole() {
+		Role roleAdmin = new Role("Admin", "manage everything");
+		Role savedRole = repo.save(roleAdmin);
+		
+		assertThat(savedRole.getId()).isGreaterThan(0);
+	}
+	
+	//Bạn sử dụng assertThat để kiểm tra xem việc lưu trữ đã thành công hay không. 
+	//Cụ thể, bạn kiểm tra rằng id của savedRole có giá trị lớn hơn 0. 
+	//Nếu lưu trữ thành công, thì id của đối tượng Role sẽ được tạo và 
+	//có giá trị lớn hơn 0.
+}

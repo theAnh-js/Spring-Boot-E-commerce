@@ -1,0 +1,39 @@
+package com.shopme.user;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
+
+import com.shopme.admin.ShopmeBackEndApplication;
+import com.shopme.admin.user.UserRepository;
+import com.shopme.common.entity.Role;
+import com.shopme.common.entity.User;
+
+@SpringBootTest(classes = ShopmeBackEndApplication.class)
+@AutoConfigureTestDatabase(replace = Replace.NONE)
+@Rollback(false)
+public class UserRepositoryTest {
+
+	@Autowired
+	private UserRepository repo;
+
+	@Autowired
+	private TestEntityManager entityManager;
+
+	@Test
+	public void testCreateUser() {
+		Role roleAdmin = entityManager.find(Role.class, 1);
+		User theanh = new User("theanh@gmail.com", "theanh123", "Anh", "Luong The");
+		theanh.addRole(roleAdmin);
+
+		User savedUser = repo.save(theanh);
+		assertThat(savedUser.getId()).isGreaterThan(0);
+	}
+
+}

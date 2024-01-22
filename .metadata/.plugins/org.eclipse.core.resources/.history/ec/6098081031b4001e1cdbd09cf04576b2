@@ -1,0 +1,5 @@
+package com.shopme.user;
+
+public class RoleRepositoryTest {
+
+}
