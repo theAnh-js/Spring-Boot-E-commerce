@@ -12,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "users")
@@ -145,6 +146,16 @@ public class User {
 	public void addRole(Role role) {
 		this.roles.add(role);
 	}
+	
+	@Transient    // @Transient được sử dụng để chỉ định rằng một trường hoặc phương thức không nên tham gia quá trình ánh xạ với cơ sở dữ liệu khi sử dụng ORM.
+	public String getPhotoImagePath() {
+		if(id == null || photos == null) return "/images/default-user.png";
+		return "/user-photos/" + this.id + "/" + this.photos;
+	}
+	// Vì ta đã config trong class MvcConfig rồi, nên khi ta lưu user có chưa file ảnh
+	// vào thì bên list user cũng hiện đã ảnh đó ra.
+	// ví dụ truy cập URL "/user-photos/image.jpg" (bên html là: th:src="@{${user.photoImagePath}}"), 
+	// Spring sẽ cố gắng tìm kiếm và cung cấp tệp tin "image.jpg" từ thư mục "user-photos" trên hệ thống tệp tin của mình.
 	
 	
 	

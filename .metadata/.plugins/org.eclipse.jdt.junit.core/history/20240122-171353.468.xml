@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UserRepositoryTest.testEnableUser" project="ShopmeBackEnd" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.shopme.admin.user.UserRepositoryTest" time="0.205" displayname="UserRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.shopme.admin.user.UserRepositoryTest]">
-    <testcase name="testEnableUser" classname="com.shopme.admin.user.UserRepositoryTest" time="0.205" displayname="testEnableUser()" uniqueid="[engine:junit-jupiter]/[class:com.shopme.admin.user.UserRepositoryTest]/[method:testEnableUser()]"/>
-  </testsuite>
-</testrun>

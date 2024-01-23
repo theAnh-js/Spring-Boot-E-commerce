@@ -26,12 +26,32 @@ public class FileUploadUtil {
 			// Ví dụ, nếu uploadPath là "/path/to/uploads" và fileName là "myFile.txt", thì uploadPath.resolve(fileName) sẽ trả về "/path/to/uploads/myFile.txt".
 			
 			Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
-			// Files.copy() để sao chép dữ liệu từ luồng đọc vào một tệp tin tại đường dẫn filePath.
+			// Files.copy() để sao chép dữ liệu từ luồng đọc inputStream vào một tệp tin tại đường dẫn filePath.
 			// StandardCopyOption.REPLACE_EXISTING được sử dụng để ghi đè lên tệp tin nếu tệp tin đã tồn tại.
 		
 		} catch (IOException e) {
 			throw new IOException("Counld not save file: " + fileName, e);
 		}	
+	}
+	
+	public static void cleanDir(String dir) {
+		
+		Path dirPath = Paths.get(dir);
+		
+		try {
+			Files.list(dirPath).forEach(file -> {
+				if(!Files.isDirectory(file)) { // Nếu file đó không phải là 1 thư mục thì nó là 1 file gì đó -> xóa
+					try {
+						Files.delete(file);
+					}catch(IOException ex) {
+						System.out.println("Could not delete file: " + file);
+					}
+					
+				}
+			});
+		}catch(IOException ex) {
+			System.out.println("Could not list directory: " + dirPath);
+		}
 	}
 	
 	//Tham số:

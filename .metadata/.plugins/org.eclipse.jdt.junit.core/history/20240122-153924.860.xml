@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UserRepositoryTest.testCountById" project="ShopmeBackEnd" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="com.shopme.admin.user.UserRepositoryTest" time="0.246" displayname="UserRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.shopme.admin.user.UserRepositoryTest]">
-    <testcase name="testCountById" classname="com.shopme.admin.user.UserRepositoryTest" time="0.246" displayname="testCountById()" uniqueid="[engine:junit-jupiter]/[class:com.shopme.admin.user.UserRepositoryTest]/[method:testCountById()]"/>
-  </testsuite>
-</testrun>
