@@ -157,6 +157,9 @@ public class User {
 	// ví dụ truy cập URL "/user-photos/image.jpg" (bên html là: th:src="@{${user.photoImagePath}}"), 
 	// Spring sẽ cố gắng tìm kiếm và cung cấp tệp tin "image.jpg" từ thư mục "user-photos" trên hệ thống tệp tin của mình.
 	
-	
+	@Transient
+	public String getFullName() {
+		return firstName + " " + lastName;
+	}
 	
 }

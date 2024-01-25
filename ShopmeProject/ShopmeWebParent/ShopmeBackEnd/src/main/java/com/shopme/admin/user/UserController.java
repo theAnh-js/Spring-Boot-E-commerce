@@ -3,6 +3,9 @@ package com.shopme.admin.user;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.repository.query.Param;
@@ -34,7 +37,7 @@ public class UserController {
 		 * model.addAttribute("listUsers", listUsers); return "users";
 		 */
 		
-		return listByPage(1, model, "firstName", "asc");
+		return listByPage(1, model, "firstName", "asc", null);
 	}
 	
 	@GetMapping("/users/page/{pageNum}")
@@ -42,11 +45,10 @@ public class UserController {
 				@PathVariable("pageNum") int pageNum, 
 				Model model,
 				@Param("sortField") String sortField,
-				@Param("sortDir") String sortDir) {
-		
-		System.out.println("Sort field: " + sortField);
-		System.out.println("Sort Order: " + sortDir);
-		Page<User> page = service.listByPage(pageNum, sortField, sortDir);
+				@Param("sortDir") String sortDir,
+				@Param("keyword") String keyword) {
+
+		Page<User> page = service.listByPage(pageNum, sortField, sortDir, keyword);
 		List<User> listUsers = page.getContent();
 		
 		long startCount = (pageNum - 1) * UserService.USERS_PER_PAGE + 1;
@@ -57,6 +59,7 @@ public class UserController {
 		
 		String reverseSortDir = sortDir.equals("asc") ? "desc" : "asc";
 		
+		model.addAttribute("keyword", keyword);
 		model.addAttribute("reverseSortDir", reverseSortDir);
 		model.addAttribute("sortField", sortField);
 		model.addAttribute("sortDir", sortDir);
@@ -108,9 +111,14 @@ public class UserController {
 		}
 		
 		//service.save(user);
-	
 	    redirectAttributes.addFlashAttribute("message", "The user has been saved successfully.");
-		return "redirect:/users";
+	    
+	    return getRedirectUrlToAffectedUser(user);
+	}
+
+	private String getRedirectUrlToAffectedUser(User user) {
+		String firstPartOfEmail = user.getEmail().split("@")[0];
+		return "redirect:/users/page/1?sortField=id&sortDir=asc&keyword=" + firstPartOfEmail;
 	}
 	
 	@GetMapping("/users/edit/{id}")
@@ -152,7 +160,8 @@ public class UserController {
 	public String updateUserEnabledStatus(
 			@PathVariable("id") Integer id,
 			@PathVariable("status") boolean status,
-			RedirectAttributes redirectAttributes			
+			RedirectAttributes redirectAttributes,
+			HttpServletRequest request
 			) {
 		
 		service.updateUserEnabledStatus(id, status);
@@ -161,9 +170,37 @@ public class UserController {
 		String message = "The user ID " + id + " has been " + statusMessage;
 		redirectAttributes.addFlashAttribute("message", message);
 		
-		return "redirect:/users";
+		//System.out.println(request.getHeader("referer")); // in ra url của request gốc
+		//return "redirect:/users";
+		
+		return "redirect:" + request.getHeader("referer"); 
+		// mục đích: sau khi xử lý enabled xong thì vẫn đứng tại trang đó,
+		// chứ không chạy sang :/users
 	}
 	
+	@GetMapping("/users/export/csv")
+	public void exportToCSV(HttpServletResponse response) throws IOException {
+		List<User> listUsers = service.listAll();
+		UserCsvExporter exporter = new UserCsvExporter();
+		
+		exporter.export(listUsers, response);
+	}
+	
+	@GetMapping("/users/export/excel")
+	public void exportToExcel(HttpServletResponse response) throws IOException {
+		List<User> listUsers = service.listAll();
+		UserExcelExporter exporter = new UserExcelExporter();
+		
+		exporter.export(listUsers, response);
+	}
+	
+	@GetMapping("/users/export/pdf")
+	public void exportToPDF(HttpServletResponse response) throws IOException {
+		List<User> listUsers = service.listAll();
+		UserPdfExporter exporter = new UserPdfExporter();
+		
+		exporter.export(listUsers, response);
+	}
 	//addFlashAttribute là một phương thức trong interface RedirectAttributes trong Spring Framework, 
 	//được sử dụng để chuyển dữ liệu từ một request sang một request khác thông qua redirect. 
 	//Thông thường, khi bạn chuyển từ một trang (controller) sang trang khác bằng cách sử dụng redirect, 

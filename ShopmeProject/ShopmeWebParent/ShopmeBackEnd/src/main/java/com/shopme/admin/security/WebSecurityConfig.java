@@ -3,6 +3,7 @@ package com.shopme.admin.security;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -19,6 +20,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests(requests -> requests.anyRequest().permitAll());
+        http.authorizeRequests(requests -> requests
+                .anyRequest().authenticated()
+                )
+                .formLogin(login -> login
+                        .loginPage("/login")
+                        .usernameParameter("email") // vì spring security mặc định name="username" trong form login
+                        .permitAll()				// nên ta cần set lại là email, vì ta muốn dùng email thay cho username.
+                  );			    
+	}
+
+	@Override
+	public void configure(WebSecurity web) throws Exception {
+		web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**");
 	}
 }
