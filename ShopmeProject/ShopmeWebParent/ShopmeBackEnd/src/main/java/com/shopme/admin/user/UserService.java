@@ -31,6 +31,9 @@ public class UserService {
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
+	public User getByEmail(String email) {
+		return userRepo.getUserByEmail(email);
+	}
 	public List<User> listAll() {
 		return (List<User>) userRepo.findAll(Sort.by("firstName").ascending());
 	}
@@ -68,6 +71,28 @@ public class UserService {
 		}
 		
 		return userRepo.save(user);
+	}
+	
+	public User updateAccount(User userInForm) {
+		User UserInDB = userRepo.findById(userInForm.getId()).get();
+		
+		if(!userInForm.getPassword().isEmpty()) {
+			UserInDB.setPassword(userInForm.getPassword());
+			encodePassword(UserInDB);
+		}else {
+			System.out.println("userInForm.getPassword() isEmpty");
+		}
+		
+		if(userInForm.getPhotos() != null) {
+			UserInDB.setPhotos(userInForm.getPhotos());
+		}else {
+			System.out.println("pho to is null");
+		}
+		
+		UserInDB.setFirstName(userInForm.getFirstName());
+		UserInDB.setLastName(userInForm.getLastName());
+		
+		return userRepo.save(UserInDB);
 	}
 
 	// phương thức mã hóa

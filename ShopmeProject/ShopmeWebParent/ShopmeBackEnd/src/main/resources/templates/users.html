@@ -1,75 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<meta name="viewport"
-	content="width=device-width,initial-scale=1.0,minium-scale=1.0">
-
-<title>Shopme Admin Control Panel</title>
-
-<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
-
-<link rel="stylesheet" type="text/css"
-	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
-<link rel="stylesheet" type="text/css" th:href="@{/fontawesome/all.css}">
-<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
-<script type="text/javascript"
-	th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-</head>
+<head th:replace="fragments :: page_head('Users - Shopme Admin')"/>
 <body>
 
 	<div class="container-fluid">
-		<div>
-			<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-
-				<a class="navbar-brand" th:href="@{/}"> <img alt=""
-					th:src="@{/images/ShopmeAdminSmall.png}">
-				</a>
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse"
-					data-target="#topNavbar">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="topNavbar">
-					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link" th:href="@{/users}">Users</a>
-						</li>
-
-						<li class="nav-item"><a class="nav-link"
-							th:href="@{/categories}">Categories</a></li>
-
-						<li class="nav-item"><a class="nav-link" th:href="@{/brands}">Brands</a>
-						</li>
-
-						<li class="nav-item"><a class="nav-link"
-							th:href="@{/products}">Products</a></li>
-
-						<li class="nav-item"><a class="nav-link"
-							th:href="@{/customers}">Customers</a></li>
-
-						<li class="nav-item"><a class="nav-link"
-							th:href="@{/shipping}">Shipping</a></li>
-
-						<li class="nav-item"><a class="nav-link" th:href="@{/orders}">Orders</a>
-						</li>
-
-						<li class="nav-item"><a class="nav-link" th:href="@{/report}">Sale
-								Report</a></li>
-
-						<li class="nav-item"><a class="nav-link"
-							th:href="@{/articles}">Articles</a></li>
-
-						<li class="nav-item"><a class="nav-link" th:href="@{/menus}">Menus</a>
-						</li>
-
-						<li class="nav-item"><a class="nav-link"
-							th:href="@{/settings}">Settings</a></li>
-
-					</ul>
-				</div>
-			</nav>
-		</div>
+	
+		<div th:replace="navigation :: menu"></div>
 
 		<div>
 			<h2>Manage Users</h2>
@@ -280,28 +217,53 @@
 			</div>
 		</div>
 
-		<div class="text-center">
-			<p>Shopme Control Panel - Copyright &copy; Shopme</p>
-		</div>
+		<div th:replace="fragments :: footer"></div>
 </div>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$(".link-delete").on("click", function(e) {
 				
-				e.preventDefault();  // chặn không cho thuộc tính href của thẻ a chạy 
+				e.preventDefault();  // ch陂ｯ�ｽｷn kh�ｾ�ｽｴng cho thu逶ｻ蜀� t�ｾ�ｽｭnh href c逶ｻ�ｽｧa th陂ｯ�ｽｻ a ch陂ｯ�ｽ｡y 
 				//alert($(this).attr("href"));		
-				link = $(this);  // Đây chính là element mà ta click vào: <a th:href="@{'/users/delete/' + ${user.id}}" class="link-delete" ...><i class="fa-solid fa-trash fa-2x icon-dark"></i></a>
-				userId = link.attr("userId"); // lấy giá trị của thuộc tính userId
-				$("#yesBtn").attr("href", link.attr("href")); // lấy thuộc tính href của link = $(this); set vào href của nút Yes
-															  // thì khi ta bấm nút Yes sẽ gọi đến controller "@{'/users/delete/' + ${user.id}}"
+				link = $(this);  // �ｾ�髱呻ｽ｢y ch�ｾ�ｽｭnh l�ｾ�ｿｽ element m�ｾ�ｿｽ ta click v�ｾ�ｿｽo: <a th:href="@{'/users/delete/' + ${user.id}}" class="link-delete" ...><i class="fa-solid fa-trash fa-2x icon-dark"></i></a>
+				userId = link.attr("userId"); // l陂ｯ�ｽ･y gi�ｾ�ｽ｡ tr逶ｻ�ｿｽ c逶ｻ�ｽｧa thu逶ｻ蜀� t�ｾ�ｽｭnh userId
+				$("#yesBtn").attr("href", link.attr("href")); // l陂ｯ�ｽ･y thu逶ｻ蜀� t�ｾ�ｽｭnh href c逶ｻ�ｽｧa link = $(this); set v�ｾ�ｿｽo href c逶ｻ�ｽｧa n�ｾ�ｽｺt Yes
+															  // th�ｾ�ｽｬ khi ta b陂ｯ�ｽ･m n�ｾ�ｽｺt Yes s陂ｯ�ｽｽ g逶ｻ邨� �ｾ�鮟幢ｽｺ�ｽｿn controller "@{'/users/delete/' + ${user.id}}"
 				$("#confirmText").text("Are you sure you want to delete this user ID " + userId + "?");
-				$("#confirmModal").modal(); // mở modal lên
+				$("#confirmModal").modal(); // m逶ｻ�ｿｽ modal l�ｾ�ｽｪn
 			});
 		});
 		
 		function clearFilter(){
 			window.location = "[[@{/users}]]"
 		}
+		
+		
+		<!-- không load được code trong file common.js nên tạm thời viết thẳng vào đây -) -->
+		$(document).ready(function() {
+			$("#logoutLink").on("click", function(e) {
+				e.preventDefault();
+				document.logoutForm.submit();
+			});
+			
+			customizeDropDownMenu();
+		});
+
+		function customizeDropDownMenu() {
+			$(".navbar .dropdown").hover(
+				function(){
+					$(this).find(".dropdown-menu").first().stop(true, true).delay(250).slideDown();
+				},
+				function(){
+					$(this).find(".dropdown-menu").first().stop(true, true).delay(100).slideUp();
+				}	
+			);
+			
+			$(".dropdown > a").on("click", function() {
+				location.href = this.href;
+			});
+		}
+		
 	</script>
 
 </body>
