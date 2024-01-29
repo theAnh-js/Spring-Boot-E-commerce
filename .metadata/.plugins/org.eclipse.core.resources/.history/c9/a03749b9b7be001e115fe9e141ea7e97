@@ -1,0 +1,10 @@
+package com.shopme.admin.category;
+
+public class CategoryPageInfo {
+
+	private long totalPages;
+	private long totalElements;
+
+	
+
+}

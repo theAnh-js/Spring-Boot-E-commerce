@@ -1,4 +1,4 @@
-!SESSION 2024-01-26 12:36:58.463 -----------------------------------------------
+!SESSION 2024-01-29 10:54:56.778 -----------------------------------------------
 eclipse.buildId=4.21.0.202312011804
 java.version=17.0.9
 java.vendor=Eclipse Adoptium
@@ -6,44 +6,36 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
 Framework arguments:  -product org.springframework.boot.ide.branding.sts4
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
 
-This is a continuation of log file C:\Project\java\ShopmeEcommerce\.metadata\.bak_0.log
-Created Time: 2024-01-26 13:19:38.919
+This is a continuation of log file C:\Project\java\ShopmeEcommerce\.metadata\.bak_1.log
+Created Time: 2024-01-29 22:52:00.781
 
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-26 13:19:38.919
-!MESSAGE Could not get trigger characters due to timeout after 50 milliseconds
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-29 22:52:00.781
+!MESSAGE 未定義または NULL 参照のプロパティ 'scrollHeight' は取得できません
 !STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getFuture(LSContentAssistProcessor.java:305)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:341)
-	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1249)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:346)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$InternalListener.verifyKey(ContentAssistant.java:835)
-	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
-	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:68)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
-	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5742)
-	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5426)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4866)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4744)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
+org.eclipse.swt.SWTException: 未定義または NULL 参照のプロパティ 'scrollHeight' は取得できません
+	at org.eclipse.swt.browser.WebBrowser$EvaluateFunction.function(WebBrowser.java:194)
+	at org.eclipse.swt.browser.WebSite.Invoke(WebSite.java:809)
+	at org.eclipse.swt.browser.WebSite$7.method6(WebSite.java:182)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:120)
+	at org.eclipse.swt.internal.ole.win32.COM.VtblCall(Native Method)
+	at org.eclipse.swt.internal.ole.win32.IDispatch.Invoke(IDispatch.java:65)
+	at org.eclipse.swt.ole.win32.OleAutomation.invoke(OleAutomation.java:575)
+	at org.eclipse.swt.ole.win32.OleAutomation.invoke(OleAutomation.java:538)
+	at org.eclipse.swt.browser.IE.execute(IE.java:1202)
+	at org.eclipse.swt.browser.WebBrowser.nonBlockingExecute(WebBrowser.java:399)
+	at org.eclipse.swt.browser.WebBrowser.evaluate(WebBrowser.java:449)
+	at org.eclipse.swt.browser.WebBrowser.evaluate(WebBrowser.java:405)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:665)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:614)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.safeEvaluate(FocusableBrowserInformationControl.java:130)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.lambda$0(FocusableBrowserInformationControl.java:101)
+	at org.eclipse.swt.browser.ProgressListener$2.completed(ProgressListener.java:98)
+	at org.eclipse.swt.browser.IE.lambda$6(IE.java:656)
+	at org.eclipse.swt.ole.win32.OleEventTable.sendEvent(OleEventTable.java:57)
+	at org.eclipse.swt.ole.win32.OleEventSink.notifyListener(OleEventSink.java:160)
+	at org.eclipse.swt.ole.win32.OleEventSink.Invoke(OleEventSink.java:128)
+	at org.eclipse.swt.ole.win32.OleEventSink$1.method6(OleEventSink.java:79)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:120)
 	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
 	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
@@ -68,41 +60,33 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
 
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-26 13:19:38.972
-!MESSAGE Could not get trigger characters due to timeout after 50 milliseconds
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-29 22:52:00.788
+!MESSAGE 未定義または NULL 参照のプロパティ 'marginTop' は取得できません
 !STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getFuture(LSContentAssistProcessor.java:305)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:341)
-	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1249)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:346)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:375)
-	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
-	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:68)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
-	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5742)
-	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5426)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4866)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4744)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
+org.eclipse.swt.SWTException: 未定義または NULL 参照のプロパティ 'marginTop' は取得できません
+	at org.eclipse.swt.browser.WebBrowser$EvaluateFunction.function(WebBrowser.java:194)
+	at org.eclipse.swt.browser.WebSite.Invoke(WebSite.java:809)
+	at org.eclipse.swt.browser.WebSite$7.method6(WebSite.java:182)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:120)
+	at org.eclipse.swt.internal.ole.win32.COM.VtblCall(Native Method)
+	at org.eclipse.swt.internal.ole.win32.IDispatch.Invoke(IDispatch.java:65)
+	at org.eclipse.swt.ole.win32.OleAutomation.invoke(OleAutomation.java:575)
+	at org.eclipse.swt.ole.win32.OleAutomation.invoke(OleAutomation.java:538)
+	at org.eclipse.swt.browser.IE.execute(IE.java:1202)
+	at org.eclipse.swt.browser.WebBrowser.nonBlockingExecute(WebBrowser.java:399)
+	at org.eclipse.swt.browser.WebBrowser.evaluate(WebBrowser.java:449)
+	at org.eclipse.swt.browser.WebBrowser.evaluate(WebBrowser.java:405)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:665)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:614)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.safeEvaluate(FocusableBrowserInformationControl.java:130)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.lambda$0(FocusableBrowserInformationControl.java:102)
+	at org.eclipse.swt.browser.ProgressListener$2.completed(ProgressListener.java:98)
+	at org.eclipse.swt.browser.IE.lambda$6(IE.java:656)
+	at org.eclipse.swt.ole.win32.OleEventTable.sendEvent(OleEventTable.java:57)
+	at org.eclipse.swt.ole.win32.OleEventSink.notifyListener(OleEventSink.java:160)
+	at org.eclipse.swt.ole.win32.OleEventSink.Invoke(OleEventSink.java:128)
+	at org.eclipse.swt.ole.win32.OleEventSink$1.method6(OleEventSink.java:79)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:120)
 	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
 	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
@@ -127,88 +111,35 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
 
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-26 13:20:09.446
-!MESSAGE Classpath changed for project: ShopmeBackEnd
-
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-26 13:20:09.447
-!MESSAGE Classpath changed for project: ShopmeFrontEnd
-
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-26 13:20:10.375
-!MESSAGE Classpath changed for project: ShopmeFrontEnd
-
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-26 13:20:10.695
-!MESSAGE Classpath changed for project: ShopmeBackEnd
-
-!ENTRY org.eclipse.lsp4e 4 0 2024-01-26 13:20:11.229
-!MESSAGE Marker id 1653 not found.
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException(/ShopmeBackEnd/pom.xml)[376]: java.lang.IllegalStateException
-	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:63)
-	at org.eclipse.core.internal.resources.Marker.getAttributes(Marker.java:163)
-	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.updateMarker(LSPDiagnosticsToMarkers.java:199)
-	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers$1.runInWorkspace(LSPDiagnosticsToMarkers.java:174)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SUBENTRY 1 org.eclipse.core.resources 4 376 2024-01-26 13:20:11.230
-!MESSAGE Marker id 1653 not found.
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-29 22:52:00.796
+!MESSAGE 未定義または NULL 参照のプロパティ 'marginBottom' は取得できません
 !STACK 0
-java.lang.IllegalStateException
-	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:63)
-	at org.eclipse.core.internal.resources.Marker.getAttributes(Marker.java:163)
-	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers.updateMarker(LSPDiagnosticsToMarkers.java:199)
-	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers$1.runInWorkspace(LSPDiagnosticsToMarkers.java:174)
-	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2024-01-26 13:24:06.305
-!MESSAGE Internal Error
-!STACK 1
-Java Model Exception: Error in Java Model (code 969): ShopmeWebParent does not exist
-	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:549)
-	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2576)
-	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:2438)
-	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2536)
-	at org.springframework.tooling.boot.ls.BootProjectTester.isProjectWithDependency(BootProjectTester.java:71)
-	at org.springframework.tooling.boot.ls.BootProjectTester.test(BootProjectTester.java:58)
-	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
-	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
-	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
-	at org.eclipse.core.expressions.AndExpression.evaluate(AndExpression.java:36)
-	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
-	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:121)
-	at org.eclipse.core.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
-	at org.eclipse.core.expressions.OrExpression.evaluate(OrExpression.java:26)
-	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
-	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:163)
-	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
-	at org.eclipse.core.expressions.AndExpression.evaluate(AndExpression.java:36)
-	at org.eclipse.e4.ui.internal.workbench.ContributionsAnalyzer.isCoreExpressionVisible(ContributionsAnalyzer.java:281)
-	at org.eclipse.e4.ui.internal.workbench.ContributionsAnalyzer.isVisible(ContributionsAnalyzer.java:255)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributionRecord.computeVisibility(ContributionRecord.java:170)
-	at org.eclipse.e4.ui.workbench.renderers.swt.ContributionRecord.updateVisibility(ContributionRecord.java:101)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:191)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:202)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.showMenu(MenuManagerShowProcessor.java:256)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToHide(MenuManagerShowProcessor.java:114)
-	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPostHelper(MenuManagerEventHelper.java:95)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:469)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1071)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5141)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4773)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1478)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2305)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4112)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3653)
+org.eclipse.swt.SWTException: 未定義または NULL 参照のプロパティ 'marginBottom' は取得できません
+	at org.eclipse.swt.browser.WebBrowser$EvaluateFunction.function(WebBrowser.java:194)
+	at org.eclipse.swt.browser.WebSite.Invoke(WebSite.java:809)
+	at org.eclipse.swt.browser.WebSite$7.method6(WebSite.java:182)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:120)
+	at org.eclipse.swt.internal.ole.win32.COM.VtblCall(Native Method)
+	at org.eclipse.swt.internal.ole.win32.IDispatch.Invoke(IDispatch.java:65)
+	at org.eclipse.swt.ole.win32.OleAutomation.invoke(OleAutomation.java:575)
+	at org.eclipse.swt.ole.win32.OleAutomation.invoke(OleAutomation.java:538)
+	at org.eclipse.swt.browser.IE.execute(IE.java:1202)
+	at org.eclipse.swt.browser.WebBrowser.nonBlockingExecute(WebBrowser.java:399)
+	at org.eclipse.swt.browser.WebBrowser.evaluate(WebBrowser.java:449)
+	at org.eclipse.swt.browser.WebBrowser.evaluate(WebBrowser.java:405)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:665)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:614)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.safeEvaluate(FocusableBrowserInformationControl.java:130)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.lambda$0(FocusableBrowserInformationControl.java:103)
+	at org.eclipse.swt.browser.ProgressListener$2.completed(ProgressListener.java:98)
+	at org.eclipse.swt.browser.IE.lambda$6(IE.java:656)
+	at org.eclipse.swt.ole.win32.OleEventTable.sendEvent(OleEventTable.java:57)
+	at org.eclipse.swt.ole.win32.OleEventSink.notifyListener(OleEventSink.java:160)
+	at org.eclipse.swt.ole.win32.OleEventSink.Invoke(OleEventSink.java:128)
+	at org.eclipse.swt.ole.win32.OleEventSink$1.method6(OleEventSink.java:79)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback6(COMObject.java:120)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
@@ -230,38 +161,8 @@ Java Model Exception: Error in Java Model (code 969): ShopmeWebParent does not e
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-!SUBENTRY 1 org.eclipse.jdt.core 4 969 2024-01-26 13:24:06.307
-!MESSAGE ShopmeWebParent does not exist
 
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-26 13:24:16.921
-!MESSAGE Classpath changed for project: ShopmeBackEnd
-
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-26 13:24:16.922
-!MESSAGE Classpath changed for project: ShopmeFrontEnd
-
-!ENTRY org.eclipse.jface.text 4 0 2024-01-26 14:35:42.198
-!MESSAGE Unexpected runtime error while computing a text hover
-!STACK 0
-java.lang.NullPointerException: Cannot invoke "org.eclipse.wst.sse.core.internal.provisional.text.ITextRegion.getStart()" because "containedRegion" is null
-	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocumentRegion.getStartOffset(BasicStructuredDocumentRegion.java:279)
-	at org.eclipse.wst.sse.core.internal.text.BasicStructuredDocumentRegion.getText(BasicStructuredDocumentRegion.java:306)
-	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeTagAttValueHelp(XMLTagInfoHoverProcessor.java:136)
-	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeRegionHelp(XMLTagInfoHoverProcessor.java:113)
-	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.computeHoverHelp(XMLTagInfoHoverProcessor.java:88)
-	at org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor.getHoverInfo(XMLTagInfoHoverProcessor.java:259)
-	at org.eclipse.wst.sse.ui.internal.taginfo.BestMatchHover.getHoverInfo2(BestMatchHover.java:144)
-	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
-
-!ENTRY org.eclipse.lsp4e 1 0 2024-01-26 14:46:21.964
-!MESSAGE [Info]	ESLint server running in node v18.18.2
-
-!ENTRY org.eclipse.lsp4e 1 0 2024-01-26 14:46:22.077
-!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\Project\java\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
-
-!ENTRY org.eclipse.lsp4e 1 0 2024-01-26 14:46:22.081
-!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
-
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-26 15:21:39.134
+!ENTRY org.eclipse.lsp4e 2 0 2024-01-29 23:44:02.394
 !MESSAGE Javadoc unavailable. Failed to obtain it.
 !STACK 0
 java.lang.InterruptedException
@@ -273,96 +174,7 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
 
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-26 15:21:40.099
-!MESSAGE Javadoc unavailable. Failed to obtain it.
-!STACK 0
-java.lang.InterruptedException
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
-	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
-	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
-!SESSION 2024-01-27 19:42:16.007 -----------------------------------------------
-eclipse.buildId=4.21.0.202312011804
-java.version=17.0.9
-java.vendor=Eclipse Adoptium
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
-Framework arguments:  -product org.springframework.boot.ide.branding.sts4
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
-
-!ENTRY org.eclipse.emf.ecore 2 0 2024-01-27 19:42:21.020
-!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
-
-!ENTRY org.eclipse.jface 2 0 2024-01-27 19:49:11.374
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2024-01-27 19:49:11.374
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-27 19:49:16.108
-!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
-START:
-C:\Project\java\sts-4.21.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\javaw.exe
--cp
-C:\Project\java\sts-4.21.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.51.0.202312011752\servers\spring-boot-language-server\BOOT-INF\classes;C:\Project\java\sts-4.21.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.51.0.202312011752\servers\spring-boot-language-server\BOOT-INF\lib\*
--Dsts.lsp.client=eclipse
--Dlsp.completions.indentation.enable=true
--Xmx1024m
--XX:+HeapDumpOnOutOfMemoryError
--XX:TieredStopAtLevel=1
--Xlog:jni+resolve=off
--Dspring.config.location=file:C:\Project\java\sts-4.21.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.51.0.202312011752\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
--XX:ErrorFile=C:/Project/java/ShopmeEcommerce/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1706352556107
-org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
---languageserver.hover-timeout=225
-END
-
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-27 19:49:16.109
-!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-01-27 19:49:16.129
-!MESSAGE Started org.springframework.tooling.boot.ls LS process 25504
-
-!ENTRY org.eclipse.egit.ui 2 0 2024-01-27 19:49:17.492
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\meiou'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-27 19:49:17.709
-!MESSAGE Boot project ADDED: ShopmeBackEnd
-
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-27 19:49:17.711
-!MESSAGE Starting Boot LS...
-
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-27 19:49:17.713
-!MESSAGE Started Boot LS process
-
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-27 19:49:17.715
-!MESSAGE Boot project ADDED: ShopmeCommon
-
-!ENTRY org.springframework.tooling.boot.ls 1 0 2024-01-27 19:49:17.717
-!MESSAGE Boot project ADDED: ShopmeFrontEnd
-
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 19:55:16.433
+!ENTRY org.eclipse.lsp4e 2 0 2024-01-29 23:48:19.680
 !MESSAGE Javadoc unavailable. Failed to obtain it.
 !STACK 0
 java.lang.InterruptedException
@@ -374,414 +186,7 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
 
-!ENTRY org.eclipse.jface.text 4 0 2024-01-27 19:55:16.550
-!MESSAGE Unexpected runtime error while computing a text hover
-!STACK 0
-java.lang.NullPointerException: Cannot read the array length because "this.fields" is null
-	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.getField(BinaryTypeBinding.java:1505)
-	at org.eclipse.jdt.internal.compiler.lookup.AnnotationBinding.buildTargetAnnotation(AnnotationBinding.java:185)
-	at org.eclipse.jdt.internal.compiler.lookup.AnnotationBinding.addStandardAnnotations(AnnotationBinding.java:81)
-	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.retrieveAnnotations(BinaryTypeBinding.java:1975)
-	at org.eclipse.jdt.internal.compiler.lookup.ReferenceBinding.getAnnotations(ReferenceBinding.java:1083)
-	at org.eclipse.jdt.core.dom.TypeBinding.getAnnotations(TypeBinding.java:122)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getAnnotations(JavadocHover.java:1182)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.addAnnotations(JavadocHover.java:1142)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:750)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:671)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:663)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
-	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
-
-!ENTRY org.eclipse.jface 2 0 2024-01-27 20:00:53.480
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2024-01-27 20:00:53.481
-!MESSAGE A conflict occurred for CTRL+SHIFT+C:
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
-		,
-		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
-		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-Binding(CTRL+SHIFT+C,
-	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
-		,
-		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
-		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.textEditorScope,,,system)
-
-!ENTRY org.eclipse.lsp4e 1 0 2024-01-27 20:00:53.661
-!MESSAGE [Info]	ESLint server running in node v18.18.2
-
-!ENTRY org.eclipse.lsp4e 1 0 2024-01-27 20:00:53.814
-!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\Project\java\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
-
-!ENTRY org.eclipse.lsp4e 1 0 2024-01-27 20:00:53.821
-!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
-
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 20:00:58.863
-!MESSAGE Could not get trigger characters due to timeout after 50 milliseconds
-!STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getFuture(LSContentAssistProcessor.java:305)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:341)
-	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1249)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:346)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$InternalListener.verifyKey(ContentAssistant.java:835)
-	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
-	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:68)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
-	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5742)
-	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5426)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4866)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4744)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 20:00:58.915
-!MESSAGE Could not get trigger characters due to timeout after 50 milliseconds
-!STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getFuture(LSContentAssistProcessor.java:305)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:341)
-	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1249)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:346)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:375)
-	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
-	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:68)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
-	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5742)
-	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5426)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4866)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4744)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 20:00:59.205
-!MESSAGE Could not get trigger characters due to timeout after 50 milliseconds
-!STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getFuture(LSContentAssistProcessor.java:305)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:341)
-	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1249)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:346)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$InternalListener.verifyKey(ContentAssistant.java:835)
-	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
-	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:68)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
-	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5742)
-	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5426)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4866)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4744)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 20:01:00.282
-!MESSAGE Could not get trigger characters due to timeout after 50 milliseconds
-!STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getFuture(LSContentAssistProcessor.java:305)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:341)
-	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1249)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:346)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:375)
-	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
-	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:68)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
-	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5742)
-	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5426)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4866)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4744)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 20:01:01.602
-!MESSAGE Could not get trigger characters due to timeout after 50 milliseconds
-!STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getFuture(LSContentAssistProcessor.java:305)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:341)
-	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1249)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:346)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$InternalListener.verifyKey(ContentAssistant.java:835)
-	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
-	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:68)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
-	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5742)
-	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5426)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4866)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4744)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 20:01:01.653
-!MESSAGE Could not get trigger characters due to timeout after 50 milliseconds
-!STACK 0
-java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getFuture(LSContentAssistProcessor.java:305)
-	at org.eclipse.lsp4e.operations.completion.LSContentAssistProcessor.getCompletionProposalAutoActivationCharacters(LSContentAssistProcessor.java:341)
-	at org.eclipse.jface.text.contentassist.IContentAssistProcessorExtension$1.isCompletionProposalAutoActivation(IContentAssistProcessorExtension.java:115)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.getAutoActivationTriggerType(ContentAssistant.java:1249)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.keyPressed(ContentAssistant.java:346)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.verifyKey(ContentAssistant.java:375)
-	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:480)
-	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:68)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:778)
-	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:5742)
-	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5426)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4866)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4744)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-
-!ENTRY org.eclipse.lsp4e 1 0 2024-01-27 20:49:54.193
-!MESSAGE [Info]	ESLint server running in node v18.18.2
-
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 21:06:13.741
+!ENTRY org.eclipse.lsp4e 2 0 2024-01-29 23:54:01.472
 !MESSAGE Javadoc unavailable. Failed to obtain it.
 !STACK 0
 java.lang.InterruptedException
@@ -793,7 +198,7 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
 
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 21:09:46.088
+!ENTRY org.eclipse.lsp4e 2 0 2024-01-29 23:56:42.348
 !MESSAGE Javadoc unavailable. Failed to obtain it.
 !STACK 0
 java.lang.InterruptedException
@@ -805,707 +210,7 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
 
-!ENTRY org.eclipse.wst.sse.ui 4 0 2024-01-27 21:13:03.405
-!MESSAGE The ''Thymeleaf Processor Proposal Computer'' proposal computer from the ''org.thymeleaf.extras.eclipse.contentassist'' plug-in did not complete normally. Unable to instantiate the extension.
-!STACK 1
-Java Model Exception: Error in Java Model (code 969): Locale.class [in java.util [in <module:java.base>]] does not exist
-	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:549)
-	at org.eclipse.jdt.internal.core.ClassFile.getBinaryTypeInfo(ClassFile.java:203)
-	at org.eclipse.jdt.internal.core.ClassFile.buildStructure(ClassFile.java:92)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:572)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:303)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:289)
-	at org.eclipse.jdt.internal.core.BinaryType.getClassFileInfo(BinaryType.java:228)
-	at org.eclipse.jdt.internal.core.BinaryType.getChildren(BinaryType.java:191)
-	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:258)
-	at org.eclipse.jdt.internal.core.BinaryType.getMethods(BinaryType.java:490)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor.generateExpressionObjectMethods(DialectItemProcessor.groovy:84)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:342)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor$_processDialectItems_closure2.doCall(DialectItemProcessor.groovy:136)
-	at jdk.internal.reflect.GeneratedMethodAccessor144.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6211)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6153)
-	at org.codehaus.groovy.runtime.dgm$440.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor.processDialectItems(DialectItemProcessor.groovy:127)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache$_loadDialectsFromProject_closure8.doCall(DialectCache.groovy:257)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2303)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2283)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2333)
-	at org.codehaus.groovy.runtime.dgm$220.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache.loadDialectsFromProject(DialectCache.groovy:255)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache.getAttributeProcessors(DialectCache.groovy:149)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.generators.AttributeProcessorProposalGenerator.generate(AttributeProcessorProposalGenerator.groovy:167)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.CompletionProposalComputer$_computeCompletionProposals_closure1.doCall(CompletionProposalComputer.groovy:93)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6211)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6153)
-	at org.codehaus.groovy.runtime.dgm$440.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.CompletionProposalComputer.computeCompletionProposals(CompletionProposalComputer.groovy:92)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:290)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:292)
-	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.collectProposals(StructuredContentAssistProcessor.java:486)
-	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.computeCompletionProposals(StructuredContentAssistProcessor.java:257)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompoundContentAssistProcessor.computeCompletionProposals(CompoundContentAssistProcessor.java:129)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$2.lambda$0(ContentAssistant.java:2064)
-	at java.base/java.util.Collections$SingletonSet.forEach(Collections.java:4905)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$2.run(ContentAssistant.java:2063)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2060)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:577)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.lambda$0(CompletionProposalPopup.java:507)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:502)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.showPossibleCompletions(ContentAssistant.java:1874)
-	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.doOperation(StructuredTextViewer.java:490)
-	at org.eclipse.ui.texteditor.ContentAssistAction.lambda$0(ContentAssistAction.java:85)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
-	at org.eclipse.ui.texteditor.ContentAssistAction.run(ContentAssistAction.java:84)
-	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
-	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:99)
-	at jdk.internal.reflect.GeneratedMethodAccessor105.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:298)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:232)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:174)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:165)
-	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
-	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:580)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:655)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:439)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1286)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1065)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4866)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4744)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-!SUBENTRY 1 org.eclipse.jdt.core 4 969 2024-01-27 21:13:03.408
-!MESSAGE Locale.class [in java.util [in <module:java.base>]] does not exist
-
-!ENTRY org.eclipse.wst.sse.ui 4 0 2024-01-27 21:13:04.558
-!MESSAGE The ''Thymeleaf Processor Proposal Computer'' proposal computer from the ''org.thymeleaf.extras.eclipse.contentassist'' plug-in did not complete normally. Unable to instantiate the extension.
-!STACK 1
-Java Model Exception: Error in Java Model (code 969): Locale.class [in java.util [in <module:java.base>]] does not exist
-	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:549)
-	at org.eclipse.jdt.internal.core.ClassFile.getBinaryTypeInfo(ClassFile.java:203)
-	at org.eclipse.jdt.internal.core.ClassFile.buildStructure(ClassFile.java:92)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:572)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:303)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:289)
-	at org.eclipse.jdt.internal.core.BinaryType.getClassFileInfo(BinaryType.java:228)
-	at org.eclipse.jdt.internal.core.BinaryType.getChildren(BinaryType.java:191)
-	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:258)
-	at org.eclipse.jdt.internal.core.BinaryType.getMethods(BinaryType.java:490)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor.generateExpressionObjectMethods(DialectItemProcessor.groovy:84)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:342)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor$_processDialectItems_closure2.doCall(DialectItemProcessor.groovy:136)
-	at jdk.internal.reflect.GeneratedMethodAccessor144.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6211)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6153)
-	at org.codehaus.groovy.runtime.dgm$440.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor.processDialectItems(DialectItemProcessor.groovy:127)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache$_loadDialectsFromProject_closure8.doCall(DialectCache.groovy:257)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2303)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2283)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2333)
-	at org.codehaus.groovy.runtime.dgm$220.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache.loadDialectsFromProject(DialectCache.groovy:255)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache.getAttributeProcessors(DialectCache.groovy:149)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.generators.AttributeProcessorProposalGenerator.generate(AttributeProcessorProposalGenerator.groovy:167)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.CompletionProposalComputer$_computeCompletionProposals_closure1.doCall(CompletionProposalComputer.groovy:93)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6211)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6153)
-	at org.codehaus.groovy.runtime.dgm$440.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.CompletionProposalComputer.computeCompletionProposals(CompletionProposalComputer.groovy:92)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:290)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:292)
-	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.collectProposals(StructuredContentAssistProcessor.java:486)
-	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.computeCompletionProposals(StructuredContentAssistProcessor.java:257)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompoundContentAssistProcessor.computeCompletionProposals(CompoundContentAssistProcessor.java:129)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$2.lambda$0(ContentAssistant.java:2064)
-	at java.base/java.util.Collections$SingletonSet.forEach(Collections.java:4905)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$2.run(ContentAssistant.java:2063)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2060)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:577)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.lambda$0(CompletionProposalPopup.java:507)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:502)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.showPossibleCompletions(ContentAssistant.java:1874)
-	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.doOperation(StructuredTextViewer.java:490)
-	at org.eclipse.ui.texteditor.ContentAssistAction.lambda$0(ContentAssistAction.java:85)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
-	at org.eclipse.ui.texteditor.ContentAssistAction.run(ContentAssistAction.java:84)
-	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
-	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:99)
-	at jdk.internal.reflect.GeneratedMethodAccessor105.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:298)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:232)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:174)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:165)
-	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
-	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:580)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:655)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:439)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1286)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1065)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4866)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4744)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-!SUBENTRY 1 org.eclipse.jdt.core 4 969 2024-01-27 21:13:04.559
-!MESSAGE Locale.class [in java.util [in <module:java.base>]] does not exist
-
-!ENTRY org.eclipse.wst.sse.ui 4 0 2024-01-27 21:13:05.944
-!MESSAGE The ''Thymeleaf Processor Proposal Computer'' proposal computer from the ''org.thymeleaf.extras.eclipse.contentassist'' plug-in did not complete normally. Unable to instantiate the extension.
-!STACK 1
-Java Model Exception: Error in Java Model (code 969): Locale.class [in java.util [in <module:java.base>]] does not exist
-	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:549)
-	at org.eclipse.jdt.internal.core.ClassFile.getBinaryTypeInfo(ClassFile.java:203)
-	at org.eclipse.jdt.internal.core.ClassFile.buildStructure(ClassFile.java:92)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:572)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:303)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:289)
-	at org.eclipse.jdt.internal.core.BinaryType.getClassFileInfo(BinaryType.java:228)
-	at org.eclipse.jdt.internal.core.BinaryType.getChildren(BinaryType.java:191)
-	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:258)
-	at org.eclipse.jdt.internal.core.BinaryType.getMethods(BinaryType.java:490)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor.generateExpressionObjectMethods(DialectItemProcessor.groovy:84)
-	at jdk.internal.reflect.GeneratedMethodAccessor151.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:342)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor$_processDialectItems_closure2.doCall(DialectItemProcessor.groovy:136)
-	at jdk.internal.reflect.GeneratedMethodAccessor144.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6211)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6153)
-	at org.codehaus.groovy.runtime.dgm$440.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor.processDialectItems(DialectItemProcessor.groovy:127)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache$_loadDialectsFromProject_closure8.doCall(DialectCache.groovy:257)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2303)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2283)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2333)
-	at org.codehaus.groovy.runtime.dgm$220.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache.loadDialectsFromProject(DialectCache.groovy:255)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache.getAttributeProcessors(DialectCache.groovy:149)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.generators.AttributeProcessorProposalGenerator.generate(AttributeProcessorProposalGenerator.groovy:167)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.CompletionProposalComputer$_computeCompletionProposals_closure1.doCall(CompletionProposalComputer.groovy:93)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6211)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6153)
-	at org.codehaus.groovy.runtime.dgm$440.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.CompletionProposalComputer.computeCompletionProposals(CompletionProposalComputer.groovy:92)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:290)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:292)
-	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.collectProposals(StructuredContentAssistProcessor.java:486)
-	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.computeCompletionProposals(StructuredContentAssistProcessor.java:257)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompoundContentAssistProcessor.computeCompletionProposals(CompoundContentAssistProcessor.java:129)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$2.lambda$0(ContentAssistant.java:2064)
-	at java.base/java.util.Collections$SingletonSet.forEach(Collections.java:4905)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$2.run(ContentAssistant.java:2063)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2060)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:577)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeFilteredProposals(CompletionProposalPopup.java:1543)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$1.run(CompletionProposalPopup.java:367)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-!SUBENTRY 1 org.eclipse.jdt.core 4 969 2024-01-27 21:13:05.944
-!MESSAGE Locale.class [in java.util [in <module:java.base>]] does not exist
-
-!ENTRY org.eclipse.wst.sse.ui 4 0 2024-01-27 21:13:08.178
-!MESSAGE The ''Thymeleaf Processor Proposal Computer'' proposal computer from the ''org.thymeleaf.extras.eclipse.contentassist'' plug-in did not complete normally. Unable to instantiate the extension.
-!STACK 1
-Java Model Exception: Error in Java Model (code 969): Locale.class [in java.util [in <module:java.base>]] does not exist
-	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:549)
-	at org.eclipse.jdt.internal.core.ClassFile.getBinaryTypeInfo(ClassFile.java:203)
-	at org.eclipse.jdt.internal.core.ClassFile.buildStructure(ClassFile.java:92)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:572)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:303)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:289)
-	at org.eclipse.jdt.internal.core.BinaryType.getClassFileInfo(BinaryType.java:228)
-	at org.eclipse.jdt.internal.core.BinaryType.getChildren(BinaryType.java:191)
-	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:258)
-	at org.eclipse.jdt.internal.core.BinaryType.getMethods(BinaryType.java:490)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor.generateExpressionObjectMethods(DialectItemProcessor.groovy:84)
-	at jdk.internal.reflect.GeneratedMethodAccessor151.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:342)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor$_processDialectItems_closure2.doCall(DialectItemProcessor.groovy:136)
-	at jdk.internal.reflect.GeneratedMethodAccessor144.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6211)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6153)
-	at org.codehaus.groovy.runtime.dgm$440.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor.processDialectItems(DialectItemProcessor.groovy:127)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache$_loadDialectsFromProject_closure8.doCall(DialectCache.groovy:257)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2303)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2283)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2333)
-	at org.codehaus.groovy.runtime.dgm$220.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache.loadDialectsFromProject(DialectCache.groovy:255)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache.getAttributeProcessors(DialectCache.groovy:149)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.generators.AttributeProcessorProposalGenerator.generate(AttributeProcessorProposalGenerator.groovy:167)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.CompletionProposalComputer$_computeCompletionProposals_closure1.doCall(CompletionProposalComputer.groovy:93)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6211)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6153)
-	at org.codehaus.groovy.runtime.dgm$440.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.CompletionProposalComputer.computeCompletionProposals(CompletionProposalComputer.groovy:92)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:290)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:292)
-	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.collectProposals(StructuredContentAssistProcessor.java:486)
-	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.computeCompletionProposals(StructuredContentAssistProcessor.java:257)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompoundContentAssistProcessor.computeCompletionProposals(CompoundContentAssistProcessor.java:129)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$2.lambda$0(ContentAssistant.java:2064)
-	at java.base/java.util.Collections$SingletonSet.forEach(Collections.java:4905)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$2.run(ContentAssistant.java:2063)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2060)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:577)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.lambda$0(CompletionProposalPopup.java:507)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:502)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.showPossibleCompletions(ContentAssistant.java:1874)
-	at org.eclipse.wst.sse.ui.internal.StructuredTextViewer.doOperation(StructuredTextViewer.java:490)
-	at org.eclipse.ui.texteditor.ContentAssistAction.lambda$0(ContentAssistAction.java:85)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
-	at org.eclipse.ui.texteditor.ContentAssistAction.run(ContentAssistAction.java:84)
-	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
-	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:121)
-	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:99)
-	at jdk.internal.reflect.GeneratedMethodAccessor105.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:298)
-	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:232)
-	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:174)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:165)
-	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
-	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
-	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.executeCommand(KeyBindingDispatcher.java:308)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.press(KeyBindingDispatcher.java:580)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.processKeyEvent(KeyBindingDispatcher.java:655)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher.filterKeySequenceBindings(KeyBindingDispatcher.java:439)
-	at org.eclipse.e4.ui.bindings.keys.KeyBindingDispatcher$KeyDownFilter.handleEvent(KeyBindingDispatcher.java:96)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1286)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1065)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1090)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1075)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1117)
-	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1113)
-	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1594)
-	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4866)
-	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:345)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4744)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5039)
-	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-!SUBENTRY 1 org.eclipse.jdt.core 4 969 2024-01-27 21:13:08.178
-!MESSAGE Locale.class [in java.util [in <module:java.base>]] does not exist
-
-!ENTRY org.eclipse.lsp4e 1 0 2024-01-27 21:22:25.251
-!MESSAGE [Info]	ESLint server running in node v18.18.2
-
-!ENTRY org.eclipse.wst.sse.ui 4 0 2024-01-27 21:29:59.986
-!MESSAGE The ''Thymeleaf Processor Proposal Computer'' proposal computer from the ''org.thymeleaf.extras.eclipse.contentassist'' plug-in did not complete normally. Unable to instantiate the extension.
-!STACK 1
-Java Model Exception: Error in Java Model (code 969): Locale.class [in java.util [in <module:java.base>]] does not exist
-	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:549)
-	at org.eclipse.jdt.internal.core.ClassFile.getBinaryTypeInfo(ClassFile.java:203)
-	at org.eclipse.jdt.internal.core.ClassFile.buildStructure(ClassFile.java:92)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:266)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:572)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:303)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:289)
-	at org.eclipse.jdt.internal.core.BinaryType.getClassFileInfo(BinaryType.java:228)
-	at org.eclipse.jdt.internal.core.BinaryType.getChildren(BinaryType.java:191)
-	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:258)
-	at org.eclipse.jdt.internal.core.BinaryType.getMethods(BinaryType.java:490)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor.generateExpressionObjectMethods(DialectItemProcessor.groovy:84)
-	at jdk.internal.reflect.GeneratedMethodAccessor151.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:342)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor$_processDialectItems_closure2.doCall(DialectItemProcessor.groovy:136)
-	at jdk.internal.reflect.GeneratedMethodAccessor144.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6211)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6153)
-	at org.codehaus.groovy.runtime.dgm$440.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectItemProcessor.processDialectItems(DialectItemProcessor.groovy:127)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache$_loadDialectsFromProject_closure8.doCall(DialectCache.groovy:257)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2303)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2283)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.eachWithIndex(DefaultGroovyMethods.java:2333)
-	at org.codehaus.groovy.runtime.dgm$220.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache.loadDialectsFromProject(DialectCache.groovy:255)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.dialect.cache.DialectCache.getAttributeProcessors(DialectCache.groovy:149)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.generators.AttributeProcessorProposalGenerator.generate(AttributeProcessorProposalGenerator.groovy:167)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.selectMethod(IndyInterface.java:355)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.CompletionProposalComputer$_computeCompletionProposals_closure1.doCall(CompletionProposalComputer.groovy:93)
-	at jdk.internal.reflect.GeneratedMethodAccessor153.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1008)
-	at groovy.lang.Closure.call(Closure.java:433)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6211)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.inject(DefaultGroovyMethods.java:6153)
-	at org.codehaus.groovy.runtime.dgm$440.doMethodInvoke(Unknown Source)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at org.thymeleaf.extras.eclipse.autocomplete.CompletionProposalComputer.computeCompletionProposals(CompletionProposalComputer.groovy:92)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:290)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:292)
-	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.collectProposals(StructuredContentAssistProcessor.java:486)
-	at org.eclipse.wst.sse.ui.contentassist.StructuredContentAssistProcessor.computeCompletionProposals(StructuredContentAssistProcessor.java:257)
-	at org.eclipse.wst.sse.ui.internal.contentassist.CompoundContentAssistProcessor.computeCompletionProposals(CompoundContentAssistProcessor.java:129)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$2.lambda$0(ContentAssistant.java:2064)
-	at java.base/java.util.Collections$SingletonSet.forEach(Collections.java:4905)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$2.run(ContentAssistant.java:2063)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
-	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:2060)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:577)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.lambda$0(CompletionProposalPopup.java:507)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
-	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:502)
-	at org.eclipse.jface.text.contentassist.ContentAssistant$AutoAssistListener.lambda$0(ContentAssistant.java:400)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
-!SUBENTRY 1 org.eclipse.jdt.core 4 969 2024-01-27 21:29:59.986
-!MESSAGE Locale.class [in java.util [in <module:java.base>]] does not exist
-
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 21:57:35.897
+!ENTRY org.eclipse.lsp4e 2 0 2024-01-30 00:01:43.683
 !MESSAGE Javadoc unavailable. Failed to obtain it.
 !STACK 0
 java.lang.InterruptedException
@@ -1517,7 +222,7 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
 
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 22:04:24.156
+!ENTRY org.eclipse.lsp4e 2 0 2024-01-30 00:01:46.716
 !MESSAGE Javadoc unavailable. Failed to obtain it.
 !STACK 0
 java.lang.InterruptedException
@@ -1529,7 +234,7 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
 
-!ENTRY org.eclipse.lsp4e 2 0 2024-01-27 22:10:49.285
+!ENTRY org.eclipse.lsp4e 2 0 2024-01-30 00:03:15.762
 !MESSAGE Javadoc unavailable. Failed to obtain it.
 !STACK 0
 java.lang.InterruptedException
@@ -1540,3 +245,41 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-01-30 00:04:28.320
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-01-30 00:22:17.016
+!MESSAGE [Error]	Notification handler 'textDocument/didOpen' failed with message: Debug Failure. False expression.
+
+!ENTRY org.eclipse.jface.text 4 0 2024-01-30 00:22:17.019
+!MESSAGE org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request textDocument/codeLens failed with message: Debug Failure. False expression.
+!STACK 0
+java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request textDocument/codeLens failed with message: Debug Failure. False expression.
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:636)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2162)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:309)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request textDocument/codeLens failed with message: Debug Failure. False expression.
+	... 11 more

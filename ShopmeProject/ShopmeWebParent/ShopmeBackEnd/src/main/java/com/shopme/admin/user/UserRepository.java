@@ -19,6 +19,7 @@ public interface UserRepository extends PagingAndSortingRepository<User, Integer
 	public Page<User> findAll(String keyword, Pageable pageable);
 	
 	// đếm số lượng bản ghi với ID cụ thể từ cơ sở dữ liệu.
+	// neu kq = 0 ||kq = null -> id do khong ton tai
 	public Long countById(Integer id); // đặt tên hàm đúng thì spring tự hiểu hàm có chức năng gì.
 									   // nên ta ko cần triển khai nó
 	

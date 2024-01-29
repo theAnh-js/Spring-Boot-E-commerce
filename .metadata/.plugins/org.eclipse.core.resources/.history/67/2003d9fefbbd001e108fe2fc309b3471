@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<head th:replace="fragments :: page_head('Categories - Shopme Admin')"/>
+<body>
+
+	<div class="container-fluid">
+	
+		<div th:replace="navigation :: menu"></div>
+
+		<div>
+			<h2>Manage Categories</h2>
+			<a th:href="@{/categories/new}" title="Create a new category"><i class="fa-solid fa-folder-plus fa-2x icon-dark"></i></a>
+			&nbsp;&nbsp;
+			<a th:href="@{/categories/export/csv}"><i class="fa-solid fa-file-csv fa-2x icon-dark"></i></a>
+			&nbsp;&nbsp;
+			<a th:href="@{/categories/export/excel}"><i class="fa-solid fa-file-excel fa-2x icon-dark"></i></a>
+			&nbsp;&nbsp;
+			<a th:href="@{/categories/export/pdf}"><i class="fa-solid fa-file-pdf fa-2x icon-dark"></i></a>
+		</div>
+
+<!-- 		<div th:if="${message != null}"
+			class="alert alert-success text-center">[[${message}]]</div>
+ -->
+		<div>
+			<form th:action="@{/categories/page/1}" class="form-inline m-3">
+				<input type="hidden" name="sortField" th:value="${sortField}"/>
+				<input type="hidden" name="sortDir" th:value="${sortDir}"/>
+				Filter:&nbsp;
+				<input type="search" name="keyword" th:value="${keyword}" class="form-control" required/>
+				&nbsp;&nbsp;
+				<button type="submit" class="btn btn-primary">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+				&nbsp;&nbsp;
+				<button onclick="clearFilter()" type="button" class="btn btn-secondary">
+					<i class="fa-solid fa-eraser"></i>
+				</button>
+			</form>
+		</div>
+		
+		<div class="full-details">
+			<table
+				class="table table-bordered table-striped table-hover table-responsive-xl">
+				<thead class="thead-dark">
+					<tr>
+						<th>ID</th>	
+						<th>Category Image</th>
+						<th>Category Name</th>
+						<th>Alias</th>
+						<th>Enabled</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="category : ${listCategories}">
+						<td>[[${category.id}]]</td>
+						<td></td>
+						<td>[[${category.name}]]</td>
+						<td>[[${category.alias}]]</td>
+						<td>
+							<a th:if="${category.enabled == true}" 
+							   th:href="@{'/categories/' + ${category.id} + '/enabled/false'}"
+							   title="Disable this category">
+							   
+								<i class="fa-solid fa-circle-check fa-2x icon-green"></i>
+							</a> 
+							
+							<a th:if="${category.enabled == false}" 
+							   th:href="@{'/categories/' + ${category.id} + '/enabled/true'}"
+							   title="Enable this category">
+							   
+								<i class="fa-solid fa-circle fa-2x icon-dark"></i>
+							</a>
+						</td>
+						
+						<td>
+							<a th:href="@{'/categories/edit/' + ${category.id}}">
+								<i class="fa-solid fa-pen-to-square fa-2x icon-green"></i>
+							</a> 
+							
+							&nbsp; 
+							
+							<a th:href="@{'/categories/delete/' + ${category.id}}" 
+								class="link-delete" 
+								title="Delete this user" 
+								th:userId="${category.id}">
+								
+								<i class="fa-solid fa-trash fa-2x icon-dark"></i>
+							</a>
+							
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		
+		<div th:replace="fragments :: footer"></div>
+</div>
+</body>
+</html>

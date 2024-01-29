@@ -33,7 +33,7 @@ public class ShopmeUserDetails implements UserDetails {
 		for(Role role : roles) {
 			authories.add(new SimpleGrantedAuthority(role.getName()));
 		}
-		return authories;
+		return authories;  // trả về Danh sách các role(name của role)
 	}
 
 	@Override
