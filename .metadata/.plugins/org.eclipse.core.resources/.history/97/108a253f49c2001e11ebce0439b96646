@@ -1,0 +1,59 @@
+package com.shopme.admin.product;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.shopme.common.entity.Product;
+
+@Service
+public class ProductService {
+	
+	@Autowired
+	private ProductRepository repo;
+	
+	public List<Product> listAll(){
+		return (List<Product>) repo.findAll();
+	}
+	
+	
+	public Product save(Product product) {
+		
+		if(product.getId() == null) {
+			product.setCreatedTime(new Date());
+		}
+		
+		product.setName(product.getName().trim());
+		
+		if(product.getAlias() == null || product.getAlias().isEmpty()) {
+			product.setAlias(product.getName().replaceAll(" ", "-"));			
+		}else {
+			product.setAlias(product.getAlias().replaceAll(" ", "-"));
+		}
+		
+		product.setUpdatedTime(new Date());
+		
+		return repo.save(product);
+	}
+	
+	public String checkUnique(Integer id, String name) {
+		
+		boolean isCreating = (id == null) || (id == 0);
+		
+		Product product = repo.findByName(name);
+		
+		if(isCreating) {
+			if(product != null) {
+				return "Duplicate";
+			}
+		}else {
+			if(product != null && product.getId() != id) {
+				return "Duplicate";
+			}
+		}
+		return "OK";
+	}
+
+}

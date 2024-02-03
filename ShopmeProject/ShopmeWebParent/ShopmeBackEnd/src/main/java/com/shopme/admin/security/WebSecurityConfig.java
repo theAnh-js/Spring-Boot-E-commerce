@@ -46,6 +46,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests(requests -> requests
         		.antMatchers("/users/**").hasAuthority("Admin") // tranh nguoi dung khong phai Admin nhung co tinh gọi url .../users/...
         		.antMatchers("/categories/**").hasAnyAuthority("Admin", "Editor")
+        		.antMatchers("/brands/**").hasAnyAuthority("Admin", "Editor")
+        		.antMatchers("/products/**").hasAnyAuthority("Admin", "Editor", "Salesperson", "Shipper")
         		.anyRequest().authenticated())
                 .formLogin(login -> login.loginPage("/login")
                                 .usernameParameter("email") // v? spring security m?c ??nh																// form login

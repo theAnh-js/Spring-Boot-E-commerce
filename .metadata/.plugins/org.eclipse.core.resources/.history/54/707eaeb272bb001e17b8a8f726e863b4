@@ -1,9 +1,0 @@
-@charset "UTF-8";
-*.icon-white {color: white}
-*.icon-silver {color: silver}
-*.icon-green {color: green}
-*.icon-dark {color: gray}
-
-.to-export:hover{
-	background-color: blue;
-}

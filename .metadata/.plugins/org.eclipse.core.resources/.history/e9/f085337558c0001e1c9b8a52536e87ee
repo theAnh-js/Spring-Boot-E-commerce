@@ -1,0 +1,71 @@
+package com.shopme.admin.brand;
+
+import java.util.List;
+import java.util.NoSuchElementException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.shopme.common.entity.Brand;
+
+@Service
+public class BrandService {
+	
+	@Autowired
+	private BrandRepository repo;
+	
+	public List<Brand> listAll(){
+		
+		return (List<Brand>) repo.findAll();
+	}
+	
+	public Brand save(Brand brand) {
+		return repo.save(brand);
+	}
+	
+	public Brand get(int id) throws BrandNotFoundException {
+		
+		try {
+			return repo.findById(id).get();
+		}catch(NoSuchElementException e) {
+			throw new BrandNotFoundException("Not found any brand with ID " + id );
+		}
+		
+	}
+	
+	public void delete(int id) throws BrandNotFoundException {
+		Brand brand = this.get(id);
+		repo.delete(brand);
+		
+		//C2:
+//		Long countById = repo.countById(id);
+//		if(countById == null || countById == 0) {
+//			throw new BrandNotFoundException("Not found any brand with ID " + id );
+//		}
+//		repo.deleteById(id);
+	}
+	
+	
+	public String checkUnique(Integer id, String name) {
+		
+		boolean isCreatingNew = (id == null || id == 0);
+		
+		Brand brand = repo.findByName(name);
+		
+		if(isCreatingNew) {		
+			if(brand != null) {
+				return "Duplicate";
+			}
+			
+		}else {
+			if(brand != null && brand.getId() != id) { // truong hop chinh sua name, nhung name lai trung voi brand khac 
+				return "Duplicate";
+			}
+		}
+		
+		return "OK";
+	}
+	
+	
+
+}

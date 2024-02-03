@@ -1,0 +1,14 @@
+package com.shopme.admin.product;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
+
+import com.shopme.common.entity.Product;
+
+public interface ProductRepository extends PagingAndSortingRepository<Product, Integer> {
+
+	public Product findByName(String name);
+	
+	@Query("UPDATE p FROM Product p SET p.enalbed = ?1 WHERE p.id = ?2")
+	public void enabledProduct(boolean status, Integer id);
+}

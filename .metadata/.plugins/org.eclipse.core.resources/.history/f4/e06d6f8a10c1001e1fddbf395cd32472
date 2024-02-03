@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: page_head(${pageTitle})"/>
+<body>
+
+<div class="container-fluid">
+
+	<div th:replace="navigation :: menu"></div>
+	
+	<div>
+		<h2>Manage Products |  [[${pageTitle}]]</h2>
+	</div>
+	
+	<form th:action="@{/products/save}" method="post" style="max-width:500px; margin: 0 auto;"
+		onsubmit="return checkUnique(this)"
+		th:object=${product}
+		enctype="multipart/form-data">
+		
+		<div class="border border-secondary rounded p-3">
+			
+			<input type="hidden" th:field="*{id}">
+			
+		</div>
+	</form>
+	
+	<div th:replace="modal_fragments :: modal_dialog"></div>
+	
+	<div th:replace="fragments :: footer"></div>
+</div>
+		
+</body>
+
+<script type="text/javascript">
+	
+	moduleURL = "[[@{/products}]]";  // dung cho file common_form.js
+	
+</script>
+
+<script th:src="@{/js/common_form.js}"></script>
+
+</html>

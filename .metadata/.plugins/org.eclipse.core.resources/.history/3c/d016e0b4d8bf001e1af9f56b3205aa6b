@@ -1,0 +1,46 @@
+package com.shopme.admin.brand;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.shopme.admin.category.CategoryService;
+import com.shopme.common.entity.Brand;
+import com.shopme.common.entity.Category;
+
+@Controller
+public class BrandController {
+	
+	@Autowired
+	private BrandService brandService;
+	
+	@Autowired
+	private CategoryService categoryService;
+	
+	@GetMapping("/brands")
+	public String listAll(Model model) {
+		
+		List<Brand> listBrands = brandService.findAll();
+				
+		model.addAttribute("listBrands", listBrands);
+		
+		return "brands/brands";
+	}
+
+	@PostMapping("/brands/new")
+	public String createNewBrand(Model model) {
+		
+		List<Category> listCategories = categoryService.listCategoriesUsedInform();
+		
+		model.addAttribute("listCategories", listCategories);
+		model.addAttribute("pageTitle", "Create New Brand");
+		model.addAttribute("brand", new Brand());
+		
+		return "brands/brands_form";
+		
+	}
+}

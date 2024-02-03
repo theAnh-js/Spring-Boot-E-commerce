@@ -1,0 +1,26 @@
+package com.shopme.admin.product;
+
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.annotation.Rollback;
+
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = Replace.NONE)
+@Rollback(false)
+public class ProductRepositoryTests {
+
+}
+
+
+
+
+//Khi bạn sử dụng @AutoConfigureTestDatabase(replace = Replace.NONE), 
+//Spring Boot sẽ giữ nguyên cấu hình cơ sở dữ liệu 
+//được định nghĩa trong ứng dụng thực tế của bạn trong quá trình 
+//thực hiện các bài test thay vì thay thế nó bằng một cấu hình 
+//cơ sở dữ liệu tạm thời được sử dụng trong bài test.
+//--> Lựa chọn này thường hữu ích khi bạn muốn sử dụng 
+//cùng một cấu hình cơ sở dữ liệu trong bài test 
+//như cấu hình trong ứng dụng thực tế của bạn để 
+//đảm bảo tính nhất quán giữa môi trường kiểm thử và môi trường sản xuất.

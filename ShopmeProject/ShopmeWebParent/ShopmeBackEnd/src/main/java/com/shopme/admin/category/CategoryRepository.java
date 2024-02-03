@@ -19,6 +19,9 @@ public interface CategoryRepository extends PagingAndSortingRepository<Category,
 	@Query("SELECT c FROM Category c WHERE c.parent.id IS NULL") // lay ra cac category root - category bac cao nhat
 	public Page<Category> findRootCategories(Pageable pageable);
 	
+	@Query("SELECT c FROM Category c WHERE c.name LIKE %?1%")
+	public Page<Category> search(String keyword, Pageable pageable);
+	
 	@Query("UPDATE Category c SET c.enabled = ?2 WHERE c.id = ?1")
 	@Modifying  // để chỉ định rằng phương thức này là một truy vấn sửa đổi.
 	public void updateEnabledStatus(Integer id, boolean enabled);

@@ -158,6 +158,12 @@ public class Category {
 		this.children = children;
 	}
 	
+
+	@Override
+	public String toString() {
+		return this.name;
+	}
+
 	@Transient
 	public String getImagePath() {
 		return "/categories-images/" + this.id + "/" + this.image;

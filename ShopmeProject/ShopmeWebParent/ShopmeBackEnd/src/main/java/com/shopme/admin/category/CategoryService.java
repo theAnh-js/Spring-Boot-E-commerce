@@ -52,7 +52,8 @@ public class CategoryService {
 		return listHierarchicalCategories(rootCategories, sortDir);
 	}
 	
-	public List<Category> listByPage(CategoryPageInfo pageInfo, int pageNum, String sortDir){
+	
+	public List<Category> listByPage(CategoryPageInfo pageInfo, int pageNum, String sortDir, String keyword){
 		
 		Sort sort = Sort.by("name");
 		
@@ -64,14 +65,29 @@ public class CategoryService {
 		
 		Pageable pageable = PageRequest.of(pageNum - 1, ROOT_CATEGORIES_PER_PAGE, sort);   // khi phan trang khong the thieu Pageable nay
 		
-		Page<Category> pageCategories = repo.findRootCategories(pageable); // De kieu du lieu la Page de ow duoi co the: getTotalElements, getTotalPages
-	    
+		Page<Category> pageCategories;
+		
+		if(keyword != null && !keyword.isEmpty()) {
+			pageCategories = repo.search(keyword, pageable); // De kieu du lieu la Page de ow duoi co the: getTotalElements, getTotalPages
+		}else {
+			pageCategories = repo.findRootCategories(pageable); // De kieu du lieu la Page de ow duoi co the: getTotalElements, getTotalPages
+		}
+   
 	    pageInfo.setTotalElements(pageCategories.getTotalElements());
 	    pageInfo.setTotalPages(pageCategories.getTotalPages());
 	    
 		List<Category>	rootCategories = pageCategories.getContent();
-
-		return listHierarchicalCategories(rootCategories, sortDir);
+		
+		if(keyword != null && !keyword.isEmpty()) {
+			List<Category> searchResult = pageCategories.getContent();
+			for(Category category : searchResult) {
+				category.setHasChildren(category.getChildren().size() > 0);
+			}
+			return searchResult;
+		}else {
+			return listHierarchicalCategories(rootCategories, sortDir);
+		}
+		
 	}
 	
 	public List<Category> listHierarchicalCategories(List<Category> rootCategories, String sortDir){
@@ -84,6 +100,7 @@ public class CategoryService {
 			
 			for(Category subCategory : children) {
 				String name = "--" + subCategory.getName();
+				
 				hierarchicalCategories.add(Category.copyFull(subCategory, name));
 				
 				listSubHierarchicalCategories(hierarchicalCategories, sortDir, subCategory, 1);
@@ -119,6 +136,7 @@ public class CategoryService {
 		return repo.save(category);
 	}
 	
+	/* In ra list phan cap dung cho form */
 	public List<Category> listCategoriesUsedInform(){
 		
 		List<Category> categoriesUsedInForm = new ArrayList<>();
