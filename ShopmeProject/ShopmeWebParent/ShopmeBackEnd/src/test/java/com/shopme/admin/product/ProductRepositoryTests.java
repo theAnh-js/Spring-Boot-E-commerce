@@ -3,6 +3,7 @@ package com.shopme.admin.product;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
@@ -16,6 +17,7 @@ import org.springframework.test.annotation.Rollback;
 import com.shopme.common.entity.Brand;
 import com.shopme.common.entity.Category;
 import com.shopme.common.entity.Product;
+import com.shopme.common.entity.ProductDetail;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
@@ -98,7 +100,44 @@ public class ProductRepositoryTests {
 		
 		assertThat(!result.isPresent());
 	}
+	
+	@Test
+	public void testSaveProductWithImage() {
+		Integer productId = 1;
+		Product product = repo.findById(productId).get();
+		
+		product.setMainImage("main_image.jpg");
+		
+		product.addExtraImage("extra image 1.png");
+		product.addExtraImage("extra_image_2.png");
+		product.addExtraImage("extra-image-3.png");
+		
+		Product savedProduct = repo.save(product);
+		
+		assertThat(savedProduct.getImages().size()).isEqualTo(3);
+	}
+	
+	@Test
+	public void testSaveProductWithDetail() {
+		
+		Integer id = 12;
+		Product product = repo.findById(id).get();
+		
+		product.addProductDetails("Computer Memory Size", "8 GB");
+		product.addProductDetails("CPU Speed", "1.20GHz");
+		product.addProductDetails("Screen Size", "15.6 inches");
+		
+		Product savedProduct = repo.save(product);
+		
+		List<ProductDetail> details = savedProduct.getDetails();
+		for(ProductDetail detail : details) {
+			System.out.println(detail);
+		}
+		assertThat(savedProduct.getDetails().size()).isGreaterThan(0);
+	}
 }
+
+
 
 
 

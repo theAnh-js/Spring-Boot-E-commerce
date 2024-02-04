@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments :: page_head(${pageTitle}), 'none'"/>
+<head th:replace="fragments :: page_head(${pageTitle}, 'none')"/>
 <body>
 
 <div class="container-fluid">
@@ -95,6 +95,8 @@
 </body>
 
 <script type="text/javascript">
+	
+	MAX_FILE_SIZE = 102400; // 100KB
 	
 	moduleURL = "[[@{/categories}]]";  // dung cho file common_form.js
 

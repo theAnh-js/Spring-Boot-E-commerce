@@ -1,7 +1,9 @@
 package com.shopme.common.entity;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -14,6 +16,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "products")
@@ -71,6 +74,9 @@ public class Product {
 
 	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
 	private Set<ProductImage> images = new HashSet<>();
+	
+	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+	private List<ProductDetail> details = new ArrayList<>();
 
 	public Integer getId() {
 		return id;
@@ -237,9 +243,29 @@ public class Product {
 		this.images = images;
 	}
 	
+	public List<ProductDetail> getDetails() {
+		return details;
+	}
+
+	public void setDetails(List<ProductDetail> details) {
+		this.details = details;
+	}
+
 	public void addExtraImage(String imageName) {
 		this.images.add(new ProductImage(imageName, this));
 	}
 	
+	public void addProductDetails(String name, String valua) {
+		this.details.add(new ProductDetail(name, valua, this));
+	}
+	
+	@Transient
+	public String getMainImagePath() {
+		
+		if(id == null || mainImage == null) {
+			return "/images/image-thumbnail.png";
+		}
+		return "/product-images/" + this.id + "/" + this.mainImage;
+	}
 
 }
