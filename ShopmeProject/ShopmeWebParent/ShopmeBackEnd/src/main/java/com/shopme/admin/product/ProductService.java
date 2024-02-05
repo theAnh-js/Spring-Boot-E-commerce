@@ -2,6 +2,7 @@ package com.shopme.admin.product;
 
 import java.util.Date;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import javax.transaction.Transactional;
 
@@ -26,6 +27,8 @@ public class ProductService {
 		
 		if(product.getId() == null) {
 			product.setCreatedTime(new Date());
+		}else {
+			product.setCreatedTime(product.getCreatedTime());
 		}
 		
 		product.setName(product.getName().trim());
@@ -73,5 +76,15 @@ public class ProductService {
 		
 		repo.deleteById(id);
 	}
+	
+	public Product get(Integer id) throws ProductNotFoundException {
+		try {
+			return repo.findById(id).get();
+		}catch(NoSuchElementException e) {
+			throw new ProductNotFoundException("Counld not find any product with ID " + id);
+		}
+		
+	}
+	
 
 }
