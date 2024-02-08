@@ -1,7 +1,0 @@
-package com.shopme.admin.product;
-
-import org.springframework.data.repository.PagingAndSortingRepository;
-
-public interface ProductRepository extends PagingAndSortingRepository<T, ID> {
-
-}

@@ -67,7 +67,7 @@ public class ProductController {
 			model.addAttribute("pageTitle", category.getName());
 			model.addAttribute("category", category);
 
-			return "products_by_category";
+			return "product/products_by_category";
 
 		} catch (CategoryNotFoundException e) {
 			return "error/404";
@@ -82,7 +82,8 @@ public class ProductController {
 			
 			model.addAttribute("listCategoryParents", listCategoryParents);
 			model.addAttribute("product", product);
-			return "product_detail";
+			model.addAttribute("pageTitle", product.getShortName());
+			return "product/product_detail";
 		} catch (ProductNotFoundException e) {
 			return "error/404";
 		}
