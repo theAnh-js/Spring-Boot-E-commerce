@@ -14,6 +14,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.shopme.common.entity.Product;
+import com.shopme.common.exception.ProductNotFoundException;
 
 @Service
 @Transactional
@@ -74,6 +75,15 @@ public class ProductService {
 		product.setUpdatedTime(new Date());
 		
 		return repo.save(product);
+	}
+	
+	public void saveProductPrice(Product productInForm) {
+		Product	productInBD = repo.findById(productInForm.getId()).get();
+		productInBD.setCost(productInForm.getCost());
+		productInBD.setPrice(productInForm.getPrice());
+		productInBD.setDiscountPercent(productInForm.getDiscountPercent());
+		
+		repo.save(productInBD);
 	}
 	
 	public String checkUnique(Integer id, String name) {

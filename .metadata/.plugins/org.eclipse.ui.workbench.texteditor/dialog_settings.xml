@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="th:each"/>
+		<item key="selection" value="#authorization"/>
 		<list key="findhistory">
+			<item value="#authorization"/>
+			<item value="tostring"/>
+			<item value="to"/>
 			<item value="th:each"/>
 			<item value="special"/>
 			<item value="count"/>

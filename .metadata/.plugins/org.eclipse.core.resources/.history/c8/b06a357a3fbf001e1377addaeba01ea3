@@ -1,7 +1,0 @@
-package com.shopme.admin.brand;
-
-import org.springframework.data.repository.PagingAndSortingRepository;
-
-public class BrandRepository implements PagingAndSortingRepository<T, ID> {
-
-}

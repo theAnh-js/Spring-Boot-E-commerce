@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
 <head th:replace="fragments :: page_head('Product - Shopme Admin', 'none')"/>
 <body>
@@ -10,7 +11,10 @@
 
 		<div>
 			<h2>Manage Products</h2>
+			
+			<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">		
 			<a th:href="@{/products/new}" title="Create a new product"><i class="fa-solid fa-folder-plus fa-2x icon-dark"></i></a>
+			</th:block>
 			
 		</div>
 
@@ -49,11 +53,22 @@
 				class="table table-bordered table-striped table-hover table-responsive-xl">
 				<thead class="thead-dark">
 					<tr>
-						<th th:replace="fragments :: column_link('/products', 'id', 'ID', 'none')"/> 		
+						<th class="hideable-column">
+						<th th:replace="fragments :: column_link('/products', 'id', 'ID', 'tag')"/> 		
+						</th>
+						
 						<th>Main Image</th>
-						<th th:replace="fragments :: column_link('/products', 'name', 'Product Name', 'none')"/> 		 		
-						<th th:replace="fragments :: column_link('/products', 'brand', 'Brand', 'none')"/> 		
-						<th th:replace="fragments :: column_link('/products', 'category', 'Category', 'none')"/> 		
+						
+						<th th:replace="fragments :: column_link('/products', 'name', 'Product Name', 'none')"/> 
+						
+						<th class="hideable-column">
+						<th th:replace="fragments :: column_link('/products', 'brand', 'Brand', 'tag')"/> 
+						</th>
+							
+						<th class="hideable-column">		
+						<th th:replace="fragments :: column_link('/products', 'category', 'Category', 'tag')"/> 
+						</th>		 		
+								
 						<th>Enabled</th>
 						<th></th>
 					</tr>
@@ -71,25 +86,76 @@
 							  	 th:title="${product.name}">
 							  	 [[${product.shortName}]]</a>			 
 						</td>
-						<td>[[${product.brand.name}]]</td>
-						<td>[[${product.category.name}]]</td>
+						
+						<td class="hideable-column">[[${product.brand.name}]]</td>
+						<td class="hideable-column">[[${product.category.name}]]</td>
+						
+						<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
 						<td>
 							<div th:replace="fragments :: status(${product.enabled}, 'product', '/products/' + ${product.id})"></div>
 						</td>
+						</th:block>
+						
 						<td>
 							<a class="fas fa-file-alt fa-2x icon-green link-detail"
 								th:href="@{'/products/detail/' + ${product.id}}"
 							  	 title="View details of this product">
 							</a>
+							
+							<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor', 'Salesperson')">
 							&nbsp; 
 							<div th:replace="fragments :: edit('/products/edit/' + ${product.id}, product)"></div>
+							</th:block>
+							
+							<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
 							&nbsp; 
-							<div th:replace="fragments :: delete('/products/delete/' + ${product.id}, ${product.id}, 'product', true)"></div>											
+							<div th:replace="fragments :: delete('/products/delete/' + ${product.id}, ${product.id}, 'product', true)"></div>		
+							</th:block>
+																
 						</td>
 						
 					</tr>
 				</tbody>
 			</table>
+		</div>
+		
+		<div class="less-details">
+			<div th:each="product : ${listProducts}" class="row m-1">
+				<div class="col-4">
+					<div>
+						<img alt="Product Main Image" th:src="@{${product.mainImagePath}}"
+							class="img-fluid" style="width: 80px">
+					</div>
+				</div>
+				
+				<div class="col-8">
+					
+					<div>
+						<a class="link-detail"
+						th:href="@{'/products/detail/' + ${product.id}}"
+					  	 th:title="${product.name}">
+					  	 [[${product.shortName}]]</a>
+					</div>
+					
+					<div class="mt-2 mb-2">
+						<a class="fas fa-file-alt fa-2x icon-green link-detail"
+							th:href="@{'/products/detail/' + ${product.id}}"
+						  	 title="View details of this product">
+						</a>
+						
+						<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor', 'Salesperson')">
+						&nbsp; 
+						<div th:replace="fragments :: edit('/products/edit/' + ${product.id}, product)"></div>
+						</th:block>
+						
+						<th:block sec:authorize="hasAnyAuthority('Admin', 'Editor')">
+						&nbsp; 
+						<div th:replace="fragments :: delete('/products/delete/' + ${product.id}, ${product.id}, 'product', true)"></div>		
+						</th:block>
+					</div>
+				
+				</div>
+			</div>	
 		</div>
 		
 		<div th:replace="fragments :: pagination('/products', 'products')"></div>
