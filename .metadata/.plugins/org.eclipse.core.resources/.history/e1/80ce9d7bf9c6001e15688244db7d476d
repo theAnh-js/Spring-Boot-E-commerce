@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div th:fragement="content">
+
+</div>
+
+</body>
+</html>

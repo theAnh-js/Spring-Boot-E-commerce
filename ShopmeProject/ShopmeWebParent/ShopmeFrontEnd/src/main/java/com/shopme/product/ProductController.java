@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -87,5 +88,40 @@ public class ProductController {
 		} catch (ProductNotFoundException e) {
 			return "error/404";
 		}
+	}
+	
+	@GetMapping("/search")
+	public String searchFirstPage(@Param("keyword") String keyword, Model model) {
+		return search(keyword, 1, model);
+	}
+	
+	@GetMapping("/search/page/{pageNum}")
+	public String search(@Param("keyword") String keyword,
+						@PathVariable("pageNum") int pageNum,
+						Model model
+						) {
+		
+		Page<Product> pageProducts = productService.search(keyword, pageNum);
+		List<Product> listResult = pageProducts.getContent();
+		
+		long totalItems = pageProducts.getTotalElements();
+		long totalPages = pageProducts.getTotalPages();
+		long startCount = (pageNum - 1) * ProductService.PRODUCTS_PER_PAGE + 1;
+		long endCount = startCount + ProductService.PRODUCTS_PER_PAGE - 1;
+		if (endCount > totalItems) {
+			endCount = totalItems;
+		}
+		
+		model.addAttribute("listResult", listResult);
+		model.addAttribute("totalItems", totalItems);
+		model.addAttribute("totalPages", totalPages);
+		model.addAttribute("startCount", startCount);
+		model.addAttribute("endCount", endCount);
+		model.addAttribute("currentPage", pageNum);
+		model.addAttribute("pageTitle", keyword + " - Search Reuslt");
+		
+		model.addAttribute("listResult", listResult);
+		model.addAttribute("keyword", keyword);
+		return "product/search_result";
 	}
 }
