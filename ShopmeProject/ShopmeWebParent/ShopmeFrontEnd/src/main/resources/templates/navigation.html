@@ -8,7 +8,8 @@
 		<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
 			
 			<a class="navbar-brand" th:href="@{/}">
-				<img alt="" th:src="@{/images/ShopmeAdminSmall.png}">
+				<img alt="" th:src="@{${SITE_LOGO}}">
+				<!-- <img alt="" th:src="@{/images/ShopmeAdminSmall.png}"> -->
 			</a>
 			
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar, #searchNavbar">
@@ -85,7 +86,8 @@
 		</div>
 		 
 		<div th:fragment="footer" class="text-center">
-			<p>Shopme - Copyright &copy; Shopme Ltd.</p>
+			<p>[[${COPYRIGHT}]]</p>
+			<!-- duoc truyen tu filter trong SettingFilter.java vao:==> request.setAttribute(setting.getKey(), setting.getValue());  -->
 		</div>
 		
 	</div>

@@ -1,5 +1,0 @@
-package com.shopme.common.exception;
-
-public class ProductNotFoundException {
-
-}

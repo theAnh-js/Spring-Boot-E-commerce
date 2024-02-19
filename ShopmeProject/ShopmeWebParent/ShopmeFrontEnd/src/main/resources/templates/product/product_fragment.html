@@ -12,13 +12,24 @@
 		</div>
 		
 		<div th:if="${product.discountPercent <= 0}">
-			<span>$ [[${product.price}]]</span>
+			<span><span th:if="${CURRENCY_SYMBOL_POSITION == 'Before price'}" th:remove="tag">[[${CURRENCY_SYMBOL}]][[${#numbers.formatDecimal(product.price, 1, THOUSAND_POINT_TYPE,DECIMAL_DIGITS,DECIMAL_POINT_TYPE)}]]</span></span>
+			<span><span th:if="${CURRENCY_SYMBOL_POSITION == 'After price'}" th:remove="tag">[[${#numbers.formatDecimal(product.price, 1, THOUSAND_POINT_TYPE,DECIMAL_DIGITS,DECIMAL_POINT_TYPE)}]][[${CURRENCY_SYMBOL}]]</span></span>
 		</div>
 		
 		<div th:if="${product.discountPercent > 0}">
-			<span style="font-size: large; color: darkred">$ [[${product.discountPrice}]]</span>
-		<del><span>$ [[${product.price}]]</span></del>
+			<span><span th:if="${CURRENCY_SYMBOL_POSITION == 'Before price'}" th:remove="tag">[[${CURRENCY_SYMBOL}]][[${#numbers.formatDecimal(product.discountPrice, 1, THOUSAND_POINT_TYPE,DECIMAL_DIGITS,DECIMAL_POINT_TYPE)}]]</span></span>
+			<span><span th:if="${CURRENCY_SYMBOL_POSITION == 'After price'}" th:remove="tag">[[${#numbers.formatDecimal(product.discountPrice, 1, THOUSAND_POINT_TYPE,DECIMAL_DIGITS,DECIMAL_POINT_TYPE)}]][[${CURRENCY_SYMBOL}]]</span></span>
+			
+			<!-- <span style="font-size: large; color: darkred">$ [[${product.discountPrice}]]</span> -->
+			<del><span style="font-size: large; color: darkred"><span th:if="${CURRENCY_SYMBOL_POSITION == 'Before price'}" th:remove="tag">[[${CURRENCY_SYMBOL}]][[${#numbers.formatDecimal(product.price, 1, THOUSAND_POINT_TYPE,DECIMAL_DIGITS,DECIMAL_POINT_TYPE)}]]</span></span>
+			<span style="font-size: large; color: darkred"><span th:if="${CURRENCY_SYMBOL_POSITION == 'After price'}" th:remove="tag">[[${#numbers.formatDecimal(product.price, 1, THOUSAND_POINT_TYPE,DECIMAL_DIGITS,DECIMAL_POINT_TYPE)}]][[${CURRENCY_SYMBOL}]]</span></span></del>
+			
 		</div>
 	</div>
+	
+<div th:fragment="price_fragment(productPrice)" th:remove="tag">
+<span><span th:if="${CURRENCY_SYMBOL_POSITION == 'Before price'}" th:remove="tag">[[${CURRENCY_SYMBOL}]][[${#numbers.formatDecimal(productPrice, 1, THOUSAND_POINT_TYPE,DECIMAL_DIGITS,DECIMAL_POINT_TYPE)}]]</span></span>
+			<span><span th:if="${CURRENCY_SYMBOL_POSITION == 'After price'}" th:remove="tag">[[${#numbers.formatDecimal(productPrice, 1, THOUSAND_POINT_TYPE,DECIMAL_DIGITS,DECIMAL_POINT_TYPE)}]][[${CURRENCY_SYMBOL}]]</span></span>
+</div>
 </body>
 </html>

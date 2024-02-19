@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="StateRestControllerTests.testCreateState" project="ShopmeBackEnd" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.shopme.admin.setting.state.StateRestControllerTests" time="0.731" displayname="StateRestControllerTests" uniqueid="[engine:junit-jupiter]/[class:com.shopme.admin.setting.state.StateRestControllerTests]">
+    <testcase name="testCreateState" classname="com.shopme.admin.setting.state.StateRestControllerTests" time="0.731" displayname="testCreateState()" uniqueid="[engine:junit-jupiter]/[class:com.shopme.admin.setting.state.StateRestControllerTests]/[method:testCreateState()]"/>
+  </testsuite>
+</testrun>

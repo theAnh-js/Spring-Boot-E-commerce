@@ -1,0 +1,80 @@
+var buttonLoadForState;
+var dropDownCountryForState;
+var dropDownState;
+
+var buttonAddState;
+var buttonUpdateState;
+var buttonDeleteState;
+var labelStateName;
+var fieldStateName;d
+
+$(document).ready(function(){
+	buttonLoadForState = $("#buttonLoadCountriesForState");
+	dropDownCountryForState = $("#dropDownCountriesForState");
+	dropDownState = $("#dropDownStates");
+	
+	/*buttonAddCountry =$("#buttonAddCountry");
+	buttonUpdateCountry = $("#buttonUpdateCountry");
+	buttonDeleteCountry = $("#buttonDeleteCountry");
+	labelCountryName = $("#labelCountryName");
+	fieldCountryName = $("#fieldCountryName");
+	fieldCountryCode = $("#fieldCountryCode");*/
+	
+	
+	buttonLoadForState.click(function(){
+		loadCountriesForState();
+	});
+	
+	dropDownCountryForState.on("change", function(){
+		changeFormStates();
+	});
+	
+	
+});
+
+function changeFormStates(){
+	
+	countryId = dropDownCountryForState.val().split("-")[0];
+	url = contextPath + "states/" + countryId;
+	
+	$.get(url, function(responseJSON){
+		dropDownState.empty();
+		
+		$.each(responseJSON, function(index, state){	
+			console.log(state)
+			optionValue = state.id;
+			$("<option>").val(optionValue).text(state.name).appendTo(dropDownState);
+		});
+	}).done(function(){
+		buttonLoadForState.val("Refresh Country List");
+		showToastMessage("All States have been load");
+	}).fail(function(){
+		showToastMessage("ERROR: Could not connect to server or server encountered an error")
+	});
+		
+}
+
+function loadCountriesForState(){
+	url = contextPath + "countries/list";
+	
+	$.get(url, function(responseJSON){
+		dropDownCountryForState.empty();
+		dropDownState.empty();
+		
+		$.each(responseJSON, function(index, country){	
+			optionValue = country.id + "-" + country.code;
+			$("<option>").val(optionValue).text(country.name).appendTo(dropDownCountryForState);
+		});
+	}).done(function(){
+		buttonLoadForState.val("Refresh Country List");
+		showToastMessage("All countries have been load");
+	}).fail(function(){
+		showToastMessage("ERROR: Could not connect to server or server encountered an error")
+	});
+	
+}
+
+function showToastMessage(message){
+	$("#toastMessage").text(message);
+	$(".toast").toast('show');
+}

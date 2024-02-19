@@ -3,8 +3,10 @@ $(document).ready(function() {
 		e.preventDefault();
 		document.logoutForm.submit();
 	});
-
+	
 	customizeDropDownMenu();
+	
+	customizeTabs();
 
 });
 
@@ -21,4 +23,17 @@ function customizeDropDownMenu() {
 	$(".dropdown > a").on("click", function() {
 		location.href = this.href;
 	});
+}
+
+
+function customizeTabs(){
+	var url = document.location.toString();
+	if(url.match('#')){
+		$('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
+	}
+	
+	$('.nav-tabs a').on('show.bs.tab', function(e){
+		window.location.hash = e.target.hash;
+	});
+	
 }

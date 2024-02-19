@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment = "content" th:remove="tag">
+	<h2>Countries</h2>
+</div>
+</body>
+</html>

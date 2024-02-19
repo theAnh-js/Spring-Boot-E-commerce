@@ -1,0 +1,26 @@
+package com.shopme.admin.setting.state;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class StateRestController {
+
+	@Autowired
+	private StateRepository stateRepo;
+	
+	@GetMapping("/states/{countryId}")
+	public List<StateDTO> listByCountry(@PathVariable("countryId") Integer countryId){
+		List<StateDTO> listStatesDTO = new ArrayList<>();
+		
+		
+		return listStatesDTO;
+	}
+	
+	
+}
